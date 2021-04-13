@@ -19,6 +19,6 @@ from django.contrib.staticfiles.views import serve
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    re_path(r'^static/.*$', serve),
+    re_path(r'^static/(?P<path>.*)$', serve),
     path('', include('blog.urls'))
 ]
